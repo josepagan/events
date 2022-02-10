@@ -2,8 +2,9 @@ import { useRouter } from "next/router";
 
 const FilteredEvents = () => {
   const router = useRouter();
-  const { slug } = router.query;
-  const omg = slug[1];
+  // const { slug } = router.query;
+  //
+  //
   //really need to learn testing, should I
   //if slug has no 3 different elements, something is wrong
   //if it has 3, dictate first is year, second is month and last is id of event
