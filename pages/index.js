@@ -1,5 +1,5 @@
 import { getFeaturedEvents } from "../dummy-data";
-// import { EventsList } from "../components/events/EventsList.js";
+import  EventsList from "../components/events/EventsList";
 
 const Main = () => {
   console.log("eventsLists:", EventsList);
@@ -15,16 +15,5 @@ const Main = () => {
     </div>
   );
 };
-
-
-function EventsList({ arr }) {
-  return arr.map(ev => <article key={ev.id}>
-    <h2>{ev.title}</h2>
-    <h3>{ev.location}</h3>
-    <p>{ev.date}</p>
-  </article>
-  )
-}
-
 
 export default Main;
