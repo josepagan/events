@@ -4,6 +4,7 @@ import classes from "./EventsList.module.css"
 const EventsList = ({ items }) => {
   const listItems = items.map((ev) => (
     <EventItem
+      id={ev.id}
       key={ev.id}
       title={ev.title}
       date={ev.date}
