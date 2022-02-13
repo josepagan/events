@@ -1,10 +1,16 @@
-const EventsList = ({ arr }) => {
-  return arr.map(ev => <article key={ev.id}>
-    <h2>{ev.title}</h2>
-    <h3>{ev.location}</h3>
-    <p>{ev.date}</p>
-  </article>
-  )
-}
+import EventItem from "./EventItem";
+import classes from "./EventsList.module.css"
 
-export default EventsList
+const EventsList = ({ items }) => {
+  const listItems = items.map((ev) => (
+    <EventItem
+      key={ev.id}
+      title={ev.title}
+      date={ev.date}
+      location={ev.location}
+      image={ev.image}
+    />
+  ));
+  return <ul className={classes.list}>{listItems}</ul>;
+};
+export default EventsList;
