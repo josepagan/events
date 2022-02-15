@@ -2,15 +2,13 @@ import { getFeaturedEvents } from "../dummy-data";
 import  EventsList from "../components/events/EventsList";
 
 const Main = () => {
-  const eventsArray = getFeaturedEvents();
+  const eventsData = getFeaturedEvents();
 
   return (
     <div>
-      <h1>Starting Page</h1>
       <ul>
-        <EventsList items={eventsArray} />
+        <EventsList items={eventsData} />
       </ul>
-      <h3>Featured events</h3>
     </div>
   );
 };
