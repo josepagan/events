@@ -1,11 +1,15 @@
+import { getAllEvents } from '../../dummy-data'
+import EventsList from '../../components/events/EventsList'
+import EventsSearch from '../../components/events/EventsSearch'
 
-const Events = () => {
+const AllEvents = () => {
+  const eventsData = getAllEvents()
   return (
     <div>
-      <h1>Events Page</h1>
-      <h3>List All Events...</h3>
+      <EventsSearch/>
+      <EventsList items={eventsData}/>
     </div>
   );
 };
 
-export default Events
+export default AllEvents
