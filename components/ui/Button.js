@@ -9,7 +9,7 @@ const Button = ({ children, link, onClick }) => {
       </Link>
     );
   }
-  return <button className={styles.btn} onClick={onClick}></button>;
+  return <button className={styles.btn} onClick={onClick}>{children}</button>;
 };
 
 export default Button;
